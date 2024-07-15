@@ -1,0 +1,1 @@
+# This is AI oriented personal portfolio
