@@ -77,13 +77,13 @@ def user_input(user_question):
 def main():
     st.text("Chat to know more about me💁")
 
-    user_question = st.text_input("Ask a Question e.g Tell me about rohit")
+    user_question = st.text_input("Ask a Question e.g Tell me about deepak")
 
     if user_question:
         # Load or create FAISS index
         index_path = "faiss_index"
         if not os.path.exists(index_path):
-            path = os.path.join(os.path.dirname(__file__), "Rohit_Resume.pdf")
+            path = os.path.join(os.path.dirname(__file__), "Deepak_Resume.pdf")
             raw_text = get_pdf_text(path)
             text_chunks = get_text_chunks(raw_text)
             get_vector_store(text_chunks)
@@ -92,9 +92,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-st.title("A Data Analyst From India")
-st.write("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-st.write("[Learn More >](https://google.com)")
+st.title(" A passionate Data Analytics & Machine Learning Enthusiast from India")
+st.write("MS.c Mathematics final year student, Data Analytics and Machine Learning Enthusiast.")
+st.write("[Learn More >](https://github.com/dk1coding1zone)")
 
 # what I do 
 with st.container():
@@ -103,17 +103,16 @@ with st.container():
     with left_column:
         st.header("What I do")
         st.write(
-            '''
-            Contrary to popular belief, Lorem Ipsum is not simply random text. 
-            - It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-            - Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-            - consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-            - Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 
-            - 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-            '''
-        )
+    '''
+    My name is Deepak Singh, and here is a brief overview of my background and experience:
 
-st.write("[YouTube Channel >](https://youtube.com)")
+    1. **Education:** Pursuing an Integrated M.Sc. in Mathematics from SVNIT, Surat, with a current CGPA of 8.28.
+    2. **Work Experience:** Completed a Machine Learning Internship at Uptricks Services Pvt. Ltd., focusing on data analysis and machine learning applications.
+    3. **Projects:** Worked on Sales Data Forecasting, SQL Action: Real-World Case Studies, and developed an EDA Helper Function to automate exploratory data analysis tasks.
+    4. **Technical Skills:** Proficient in Python and SQL, and experienced with tools like Power BI, Github, and Google Collab.
+    5. **Certifications:** Earned certifications in Data Analysis with Python from Google-Coursera and Power BI from Microsoft-Press.
+    '''
+)
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
@@ -132,8 +131,9 @@ with right_column:
         width=300,  # Adjust width for better visibility
         key="coding_lottie",
         )
-image_1=Image.open("images/img1.png")
-image_2=Image.open("images/img2.png")
+image_1=Image.open("images/image1.jpg")
+image_2=Image.open("images/image2.jpg")
+image_3=Image.open("images/image3.jpg")
 with st.container():
     st.write("---")
     st.header("My Projects")
@@ -142,43 +142,51 @@ with st.container():
     with image_column:
         st.image(image_1)
     with text_column:
-        st.subheader("Intreagate Lottie Animation Inside Your Streamlit App")
+        st.subheader("Sales Data Forecasting")
         st.write(
             '''
-         - It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-         - Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-         - consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        – Forecasting: Conducted an in-depth sales analysis and forecasting for a business entity, applied time series analysis
+         to generate accurate sales forecasts for the next 15 days.
+        
+        – Preprocessing: The project included stages such as importing and cleaning data, creating the dashboard, performing
+        DAX queries and data analysis, and providing actionable insights and recommendations. (Python, Power BI, DAX)
+
             '''
         )
-        st.markdown("[YouTube Channel >](https://youtube.com)")
+        st.markdown("[See More >](https://github.com/dk1coding1zone)")
     with st.container():
             image_column,text_column=st.columns((1,2))
     with image_column:
         st.image(image_2)
     with text_column:
-        st.subheader("Intreagate Lottie Animation Inside Your Streamlit App")
+        st.subheader("SQL Action: Real-World Case Studies")
         st.write(
             '''
-         - It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-         - Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-         - consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        – SQL Analysis: Conducted in-depth SQL analysis on 5+ real-world datasets (Data Science Jobs, Google Play Store,
+        Shark Tank India, Swiggy, Indian Tourism) to extract actionable insights. Gained hands-on experience in problem solving and data manipulation, enhancing SQL proficiency and analytical capabilities. (SQL, MySQL, Excel)
+        
+        – LLM Integration: Integrated some datasets with an LLM model to automate SQL queries, allowing users to get
+        answers to their questions directly, saving 20+ hours a week by automating queries (Generative AI).
             '''
         )
-        st.markdown("[YouTube Channel >](https://youtube.com)")
+        st.markdown("[See More >](https://github.com/dk1coding1zone)")
     with st.container():
             image_column,text_column=st.columns((1,2))
     with image_column:
-        st.image(image_2)
+        st.image(image_3)
     with text_column:
-        st.subheader("Intreagate Lottie Animation Inside Your Streamlit App")
+        st.subheader("EDA Helper Function")
         st.write(
             '''
-         - It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-         - Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-         - consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        – EDA: Created an EDA helper function that saves 15+ hours a week by automating tasks like detecting missing
+        values, generating plots, and performing hypothesis tests for both numeric and categorical data.
+        
+        – Time Saving: Basic and advanced exploratory data analysis (EDA) tasks can be quickly performed by importing
+        the EDA helper function, which speeds up the analysis process (Python, NumPy, Pandas, Seaborn, Matplotlib).
+
             '''
         )
-        st.markdown("[YouTube Channel >](https://youtube.com)")
+        st.markdown("[See More >](https://github.com/dk1coding1zone)")
 
 # ---- CONTACT ----
 with st.container():
